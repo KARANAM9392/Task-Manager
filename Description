@@ -1,0 +1,33 @@
+Project Overview
+This Student Manager application allows users to:
+
+Add a new student record with details such as name, ID, major, and GPA.
+Retrieve information about a specific student by searching for their name.
+Display all students currently in the collection.
+Delete a student record by specifying their name.
+Save any updates to a file (studentsList.txt) for future use.
+The program reads from and writes to an external file to store student information, making it possible to keep data persistent across sessions.
+
+Code Walkthrough
+1. Initialization and File Handling
+The program begins by trying to open studentsList.txt to load any existing student records:
+
+If the file exists, each line is read, split by commas, and added to studentsList.
+If the file is not found, it alerts the user and initializes an empty list for studentsList, allowing the user to start a new collection.
+2. Main Menu and User Options
+The program runs an interactive menu loop that provides users with the following options:
+
+a). Add a Student: Prompts the user to enter the student's details, including their name, student ID, major, and GPA. This information is appended as a list to studentsList.
+
+b). Get Student Information: Allows the user to search for a student by name (case-insensitive). If the student is found, their details are displayed. If not, a message is shown stating no match was found.
+
+c). Display Students: Lists all students in studentsList, showing each student's name, ID, major, and GPA in a formatted style. If no students are present, it notifies the user that the list is empty.
+
+d). Delete a Student: Prompts the user to enter the name of the student they wish to delete. The program finds an exact match (case-insensitive), removes the corresponding entry from studentsList, and confirms the deletion. If the student is not found, a message is displayed.
+
+e). Quit: Exits the program after saving the updated studentsList to studentsList.txt.
+
+3. Saving Student Data
+When the user opts to quit, the program writes each student record in studentsList to studentsList.txt, ensuring that any changes are saved for future sessions.
+
+
